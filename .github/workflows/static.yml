@@ -1,8 +1,10 @@
+# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
   push:
     branches: ["main"]
+
   workflow_dispatch:
 
 permissions:
@@ -19,6 +21,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
 
     steps:
@@ -31,8 +34,11 @@ jobs:
       - name: Prepare GitHub Pages
         run: |
           mkdir -p _site/WebDev-L1-LandingPage
+          mkdir -p _site/WebDev-L1-TemperatureConverter
+
           cp -r WebDev-L1-PersonalPortfolio/* _site/
           cp -r WebDev-L1-LandingPage/* _site/WebDev-L1-LandingPage/
+          cp -r WebDev-L1-TemperatureConverter/* _site/WebDev-L1-TemperatureConverter/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
