@@ -2,6 +2,10 @@
 
 A modern, responsive, and accessible temperature conversion web application that converts temperatures between Celsius, Fahrenheit, and Kelvin with real-time validation and persistent conversion history.
 
+## 🔗 Project Links
+
+- 💻 **GitHub Source Code:** https://github.com/Salandri-Vaishnavi/OIBSIP/tree/main/WebDev-L1-TemperatureConverter
+- 🌐 **Live Demo:** https://vaishnavi-temperature-converter.netlify.app/
 ## 🚀 Live Features
 
 - 🌡️ Convert between Celsius, Fahrenheit, and Kelvin
