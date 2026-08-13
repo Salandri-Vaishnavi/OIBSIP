@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="A fast and easy temperature converter for converting temperatures between Celsius, Fahrenheit, and Kelvin."
+    >
+
+    <title>Temperature Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <section class="converter-card" aria-labelledby="page-title">
+
+            <header class="converter-header">
+               <p class="eyebrow">Precision Temperature Tool</p>
+
+<h1>Temperature Converter</h1>
+
+<p class="subtitle">
+    Convert temperatures accurately between Celsius,
+    Fahrenheit, and Kelvin.
+</p>
+            </header>
+
+            <form id="temperature-form" novalidate>
+
+                <div class="input-group">
+                    <label for="temperature">
+                        Temperature
+                    </label>
+
+                    <input
+                        type="number"
+                        id="temperature"
+                        name="temperature"
+                        placeholder="Enter temperature"
+                        step="any"
+                        autocomplete="off"
+                        aria-describedby="temperature-error"
+                    >
+
+                    <p
+                        id="temperature-error"
+                        class="error-message"
+                        role="alert"
+                        aria-live="polite"
+                    ></p>
+                </div>
+
+                <div class="input-group">
+                    <label for="input-unit">
+                        Convert from
+                    </label>
+
+                    <select id="input-unit" name="input-unit">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="convert-button">
+                    Convert Temperature
+                </button>
+
+
+                <p
+    id="conversion-status"
+    class="conversion-status"
+    role="status"
+    aria-live="polite"
+></p>
+
+            </form>
+
+            <section
+                class="result-section"
+                id="result-section"
+                aria-live="polite"
+                aria-label="Conversion results"
+            >
+
+                <h2>Conversion Results</h2>
+
+               <div class="result-grid">
+
+    <article class="result-card celsius">
+        <span class="result-label">Celsius</span>
+        <strong id="celsius-result">—</strong>
+    </article>
+
+    <article class="result-card fahrenheit">
+        <span class="result-label">Fahrenheit</span>
+        <strong id="fahrenheit-result">—</strong>
+    </article>
+
+    <article class="result-card kelvin">
+        <span class="result-label">Kelvin</span>
+        <strong id="kelvin-result">—</strong>
+    </article>
+
+</div>
+
+<button
+    type="button"
+    id="copy-button"
+    class="copy-button"
+    disabled
+>
+    Copy Results
+</button>
+           </section>
+
+
+<section
+    class="history-section"
+    id="history-section"
+    aria-labelledby="history-title"
+>
+
+    <div class="history-header">
+
+        <div>
+            <p class="history-eyebrow">
+                Your Activity
+            </p>
+
+            <h2 id="history-title">
+                Recent Conversions
+            </h2>
+        </div>
+
+        <button
+            type="button"
+            id="clear-history-button"
+            class="clear-history-button"
+        >
+            Clear
+        </button>
+
+    </div>
+
+    <div
+        id="history-list"
+        class="history-list"
+        aria-live="polite"
+    >
+    </div>
+
+</section>
+
+
+<button
+    type="button"
+    id="reset-button"
+    class="reset-button"
+>
+    Reset
+</button>
+
+        </section>
+
+        <footer class="app-footer">
+            <p>Accurate conversions • Simple interface • Easy to use</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
